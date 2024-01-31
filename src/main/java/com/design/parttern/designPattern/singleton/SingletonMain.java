@@ -2,20 +2,20 @@ package com.design.parttern.designPattern.singleton;
 
 public class SingletonMain {
     public static void main(String[] args) {
-        EagerInitilizationSingleton.getInstance();
+        EagerInitializationSingleton.getInstance();
         StaticBlockInitializationSingleton.getInstance();
         LazyInitializationSingleton.getInstance();
         LazyInitializationSingleton.getInstance();
 
         for (int i = 0; i < 5; i++) {
-            ThreadStafeSingleton.getDoubleCheckThreadSingleton();
+            ThreadSafeSingleton.getDoubleCheckThreadSingleton();
 
-            ThreadStafeSingleton.getInstance();
-            ThreadStafeSingleton.getInstance();
-            ThreadStafeSingleton.getInstance();
+            ThreadSafeSingleton.getInstance();
+            ThreadSafeSingleton.getInstance();
+            ThreadSafeSingleton.getInstance();
 
-            ThreadStafeSingleton.getDoubleCheckThreadSingleton();
-            ThreadStafeSingleton.getDoubleCheckThreadSingleton();
+            ThreadSafeSingleton.getDoubleCheckThreadSingleton();
+            ThreadSafeSingleton.getDoubleCheckThreadSingleton();
         }
     }
 }
